@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIDocumentInteractionControllerDelegate>
+
+@property (nonatomic, strong) UIDocumentInteractionController *documentInteractionController;
 
 @end
 
@@ -17,13 +19,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+  NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[[NSBundle mainBundle] bundlePath] error:NULL];
+  for (NSString *fileName in files) {
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+  
+    if ([[path pathExtension] isEqualToString:@"txt"]) {
+      self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:path]];
+      self.documentInteractionController.delegate = self;
+      self.documentInteractionController.UTI = @"public.plain-text";
+      self.documentInteractionController.name = @"r2";
+    }
+  }
+  
+  UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+  button.userInteractionEnabled = YES;
+  button.frame = CGRectMake((CGRectGetWidth(self.view.bounds) / 2) - 100, (CGRectGetHeight(self.view.bounds) / 2) - 50, 200, 100);
+  button.backgroundColor = [UIColor darkGrayColor];
+  [button addTarget:self action:@selector(displayDoc) forControlEvents:UIControlEventTouchUpInside];
+  [button setTitle:@"display" forState:UIControlStateNormal];
+  button.titleLabel.textColor = [UIColor whiteColor];
+  [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+}
+
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller
+{
+  return self;
+}
+
+- (void)displayDoc
+{
+  [self.documentInteractionController presentPreviewAnimated:YES];
 }
 
 @end

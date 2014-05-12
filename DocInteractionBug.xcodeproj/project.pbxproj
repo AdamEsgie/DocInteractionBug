@@ -19,8 +19,7 @@
 		CAB05113191160C40026849B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB05112191160C40026849B /* XCTest.framework */; };
 		CAB05114191160C40026849B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB050F3191160C30026849B /* Foundation.framework */; };
 		CAB05115191160C40026849B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB050F7191160C30026849B /* UIKit.framework */; };
-		CAB0511D191160C40026849B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAB0511B191160C40026849B /* InfoPlist.strings */; };
-		CAB0511F191160C40026849B /* DocInteractionBugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB0511E191160C40026849B /* DocInteractionBugTests.m */; };
+		CAB0513119117B450026849B /* r2.txt in Resources */ = {isa = PBXBuildFile; fileRef = CAB0513019117B450026849B /* r2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +49,7 @@
 		CAB0510B191160C40026849B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAB05111191160C40026849B /* DocInteractionBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DocInteractionBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB05112191160C40026849B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		CAB0511A191160C40026849B /* DocInteractionBugTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DocInteractionBugTests-Info.plist"; sourceTree = "<group>"; };
-		CAB0511C191160C40026849B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CAB0511E191160C40026849B /* DocInteractionBugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocInteractionBugTests.m; sourceTree = "<group>"; };
+		CAB0513019117B450026849B /* r2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = r2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				CAB050F9191160C30026849B /* DocInteractionBug */,
-				CAB05118191160C40026849B /* DocInteractionBugTests */,
 				CAB050F2191160C30026849B /* Frameworks */,
 				CAB050F1191160C30026849B /* Products */,
 			);
@@ -118,6 +114,7 @@
 				CAB05108191160C30026849B /* ViewController.h */,
 				CAB05109191160C30026849B /* ViewController.m */,
 				CAB0510B191160C40026849B /* Images.xcassets */,
+				CAB0513019117B450026849B /* r2.txt */,
 				CAB050FA191160C30026849B /* Supporting Files */,
 			);
 			path = DocInteractionBug;
@@ -130,24 +127,6 @@
 				CAB050FC191160C30026849B /* InfoPlist.strings */,
 				CAB050FF191160C30026849B /* main.m */,
 				CAB05101191160C30026849B /* DocInteractionBug-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CAB05118191160C40026849B /* DocInteractionBugTests */ = {
-			isa = PBXGroup;
-			children = (
-				CAB0511E191160C40026849B /* DocInteractionBugTests.m */,
-				CAB05119191160C40026849B /* Supporting Files */,
-			);
-			path = DocInteractionBugTests;
-			sourceTree = "<group>";
-		};
-		CAB05119191160C40026849B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CAB0511A191160C40026849B /* DocInteractionBugTests-Info.plist */,
-				CAB0511B191160C40026849B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -228,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB0513119117B450026849B /* r2.txt in Resources */,
 				CAB0510C191160C40026849B /* Images.xcassets in Resources */,
 				CAB050FE191160C30026849B /* InfoPlist.strings in Resources */,
 				CAB05107191160C30026849B /* Main.storyboard in Resources */,
@@ -238,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB0511D191160C40026849B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB0511F191160C40026849B /* DocInteractionBugTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,14 +266,6 @@
 				CAB05106191160C30026849B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CAB0511B191160C40026849B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAB0511C191160C40026849B /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -458,6 +428,7 @@
 				CAB05124191160C40026849B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAB05125191160C40026849B /* Build configuration list for PBXNativeTarget "DocInteractionBugTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +437,7 @@
 				CAB05127191160C40026849B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
